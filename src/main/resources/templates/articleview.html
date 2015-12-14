@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head lang="en">
+<title>Post an Article</title>
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+
+
+</head>
+<body>
+	<!--/*/ <th:block th:include="fragments/pageheader :: navbar"></th:block> /*/-->
+
+	<div class="container">
+
+		<div class="page-header">
+			<h1 th:text="${article.title}">Title</h1>
+			<h3>
+				<small th:text="${article.teaser}">Teaser</small>
+			</h3>
+		</div>
+		<div th:utext="${article.content}">Content</div>
+
+
+	</div>
+</body>
+</html>
